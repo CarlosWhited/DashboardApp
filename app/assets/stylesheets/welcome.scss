@@ -1,0 +1,56 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.app-header {
+  height: 40px;
+  background-color: black;
+}
+
+.dashboard-container {
+  margin: 20px;
+  font-size: 20px;
+
+  .dashboard-content {
+    .dashboard-badges {
+      display: inline-flex;
+
+      .badge {
+        margin: 0 20px;
+        height: 125px;
+        width: 125px;
+        border-radius: 25px;
+        background-color: lightskyblue;
+        color: whitesmoke;
+        
+        .count {
+          font-size: 60px;
+          text-align: center;
+        }
+
+        span {
+          display: block;
+          text-align: center;
+        }
+      }
+    }
+
+    .dashboard-tenants {
+      table {
+        margin-left: 20px;
+      }
+
+      th {
+        text-align: left;
+      }
+
+      th, td {
+        padding-right: 20px;
+      }
+      
+      .count-col {
+        text-align: center;
+      }
+    }
+  }
+}

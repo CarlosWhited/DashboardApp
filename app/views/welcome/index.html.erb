@@ -1,0 +1,37 @@
+<div class="app-header"></div>
+<div class="dashboard-container">
+  <h1 class="dashboard-title">Dashboard</h1>
+
+  <div class="dashboard-content">
+    <div class="dashboard-badges">
+      <div class="badge">
+        <div class="count"><%= @num_users %></div>
+        <span>Users</span>
+      </div>
+      <div class="badge">
+        <div class="count"><%= @num_questions %></div>
+        <span>Questions</span>
+      </div>
+      <div class="badge">
+        <div class="count"><%= @num_answers %></div>
+        <span>Answers</span>
+      </div>
+    </div>
+
+    <div class="dashboard-tenants">
+      <h2>Tenants</h2>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Number of Requests</th>
+        </tr>
+        <% @tenant_request_counts.each do |trc| %>
+          <tr>
+            <td><%= trc[:name] %></td>
+            <td class="count-col"><%= trc[:request_count] %></td>
+          </tr>
+        <% end %> 
+      </table>
+    </div>
+  </div>
+</div>
